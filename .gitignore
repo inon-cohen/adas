@@ -1,0 +1,32 @@
+# תלויות
+node_modules
+
+# קבצי בנייה
+dist
+dist-ssr
+
+# משתני סביבה וסודות - לא להעלות לגיטהאב!
+.env
+.env.local
+.env.*.local
+
+# לוגים
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# עורכים ומערכת הפעלה
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.local

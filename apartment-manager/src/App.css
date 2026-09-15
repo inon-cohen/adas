@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-main: 'Heebo', 'Rubik', system-ui, -apple-system, sans-serif;
+
+  /* מותג */
+  --brand-50: #eef2ff;
+  --brand-100: #e0e7ff;
+  --brand-400: #818cf8;
+  --brand-500: #4f46e5;
+  --brand-600: #4338ca;
+  --brand-700: #3730a3;
+
+  /* קטגוריות בדיקה בתוך דו"ח (IT / YT) */
+  --accent-it: #4f46e5;
+  --accent-it-soft: #eef2ff;
+  --accent-yt: #d97706;
+  --accent-yt-soft: #fffbeb;
+
+  /* סוגי בדיקה (מרחוק / מקומי) */
+  --remote: #2563eb;
+  --remote-soft: #eff6ff;
+  --local: #059669;
+  --local-soft: #ecfdf5;
+
+  /* טקסט */
+  --ink-900: #111827;
+  --ink-700: #374151;
+  --ink-500: #6b7280;
+  --ink-400: #9ca3af;
+
+  /* משטחים */
+  --surface: #ffffff;
+  --bg: #f3f5fb;
+  --border: #e5e7eb;
+  --border-strong: #d7dbe3;
+
+  /* מצבים */
+  --danger-bg: #fef2f2;
+  --danger-text: #b91c1c;
+  --danger-border: #fca5a5;
+
+  --success-bg: #ecfdf5;
+  --success-text: #067647;
+  --success-border: #86efac;
+
+  --warning-bg: #fff7ed;
+  --warning-text: #9a3412;
+  --warning-border: #fdba74;
+
+  /* עיצוב */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  --shadow-xs: 0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-sm: 0 2px 10px rgba(17, 24, 39, 0.05);
+  --shadow-md: 0 10px 30px rgba(17, 24, 39, 0.07);
+  --shadow-lg: 0 24px 60px rgba(17, 24, 39, 0.16);
+}
+
+#root { width: 100%; max-width: 100%; margin: 0; padding: 0; text-align: right; }
+* { box-sizing: border-box; font-family: var(--font-main); }
+body { background-color: var(--bg); margin: 0; padding: 0; direction: rtl; color: var(--ink-900); }
+.app-container { max-width: 1600px; width: 95%; margin: 0 auto; padding: 40px 20px 80px; min-height: 100vh; }
+
+/* ==================== כניסה למערכת ==================== */
+.login-page { min-height: 100vh; width: 100vw; background-image: url('./assets/bg-villa.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: fixed; top: 0; right: 0; left: 0; bottom: 0; display: flex; align-items: center; justify-content: center; }
+.login-overlay { background: linear-gradient(160deg, rgba(17, 24, 39, 0.6), rgba(67, 56, 202, 0.4)); width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.login-content { width: 100%; max-width: 440px; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+.login-title { color: #ffffff; text-align: center; font-size: 2rem; margin-bottom: 36px; text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45); font-weight: 600; letter-spacing: 0.3px; }
+.login-card { background: #ffffff; padding: 46px 38px; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); width: 100%; display: flex; flex-direction: column; gap: 26px; border-top: 4px solid var(--brand-500); }
+.glass-effect { background: rgba(255, 255, 255, 0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); }
+
+/* ==================== שדות טופס ==================== */
+.input-field { padding: 10px 6px; border: none; border-bottom: 2px solid var(--border); border-radius: 0; font-size: 1.05rem; outline: none; transition: all 0.2s ease; background-color: transparent; color: var(--ink-700); width: 100%; }
+.input-field:focus { border-bottom-color: var(--brand-500); background-color: transparent; box-shadow: none; }
+.input-field::placeholder { color: var(--ink-400); font-weight: 300; }
+
+.field-label { font-size: 0.85rem; color: var(--ink-500); font-weight: 600; margin-bottom: 6px; display: block; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 22px; }
+
+/* ==================== כפתורים ==================== */
+.btn-primary { background: linear-gradient(135deg, var(--brand-500), var(--brand-600)); color: #ffffff; border: 1px solid var(--brand-600); padding: 15px 22px; border-radius: var(--radius-sm); font-size: 1.05rem; font-weight: 600; letter-spacing: 0.2px; cursor: pointer; transition: all 0.25s ease; margin-top: 10px; box-shadow: var(--shadow-xs); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(79, 70, 229, 0.28); }
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.btn-secondary { background-color: var(--surface); color: var(--ink-700); border: 1px solid var(--border); padding: 10px 20px; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; }
+.btn-secondary:hover { background-color: #f9fafb; border-color: var(--brand-400); color: var(--brand-600); }
+
+/* ==================== כותרת עליונה ==================== */
+header.main-header { background-color: var(--surface); border-radius: var(--radius-lg); padding: 18px 30px; margin-bottom: 36px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--brand-500); flex-wrap: wrap; gap: 12px; }
+header.main-header h1 { margin: 0; font-size: 1.4rem; color: var(--ink-900); font-weight: 700; }
+
+/* ==================== רשימת נכסים ==================== */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; padding: 0; margin: 0; }
+.premium-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; box-shadow: var(--shadow-sm); transition: all 0.3s ease; display: flex; flex-direction: column; text-align: right; height: 100%; }
+.premium-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--brand-400); }
+.card-image-container { width: 100%; height: 240px; overflow: hidden; }
+.card-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.premium-card:hover .card-image { transform: scale(1.05); }
+.card-content { padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+.card-title { font-size: 1.3rem; font-weight: 600; color: var(--ink-900); margin: 0; }
+.card-info { font-size: 0.92rem; color: var(--ink-500); margin: 0; }
+.status-badge { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; margin-top: auto; align-self: flex-start; }
+.status-critical { background-color: var(--danger-bg); color: var(--danger-text); border: 1px solid var(--danger-border); }
+.status-ok { background-color: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); }
+
+/* ==================== כרטיסים כלליים ==================== */
+.details-card { background: var(--surface); border-radius: var(--radius-xl); padding: 32px; box-shadow: var(--shadow-md); border: 1px solid #f3f4f6; }
+.details-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 36px; align-items: start; }
+
+.history-scroll { display: flex; overflow-x: auto; gap: 15px; padding: 10px 5px 20px 5px; scrollbar-width: none; }
+.history-scroll::-webkit-scrollbar { display: none; }
+.history-item-card { min-width: 140px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 15px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-xs); }
+.history-item-card:hover { border-color: var(--brand-500); background-color: var(--brand-50); transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+.history-date-only { font-weight: 600; font-size: 1.1rem; color: var(--ink-900); margin: 0; }
+
+/* ==================== מדור מרחוק / מקומי ==================== */
+.category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+
+/* ==================== מדורי IT / YT בתוך בדיקה ==================== */
+.section-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.category-panel { border-radius: var(--radius-lg); padding: 20px; display: flex; flex-direction: column; gap: 16px; border: 1px solid var(--border); background: var(--surface); }
+.category-panel-it { border-top: 4px solid var(--accent-it); }
+.category-panel-yt { border-top: 4px solid var(--accent-yt); }
+.category-panel-header { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 1.05rem; font-weight: 700; padding-bottom: 4px; }
+.category-panel-header.it { color: var(--accent-it); }
+.category-panel-header.yt { color: var(--accent-yt); }
+.category-empty-hint { text-align: center; color: var(--ink-400); font-size: 0.88rem; padding: 18px 0; border: 1px dashed var(--border); border-radius: var(--radius-md); }
+.category-tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3px; }
+.category-tag-it { background: var(--accent-it-soft); color: var(--accent-it); }
+.category-tag-yt { background: var(--accent-yt-soft); color: var(--accent-yt); }
+
+/* ==================== טיוטות פתוחות ==================== */
+.drafts-box { display: flex; flex-direction: column; gap: 10px; margin-bottom: 4px; }
+.drafts-box-title { font-size: 0.82rem; font-weight: 700; color: var(--ink-500); text-transform: uppercase; letter-spacing: 0.4px; }
+.draft-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--warning-bg); border: 1px solid var(--warning-border); border-radius: var(--radius-md); padding: 10px 14px; }
+.draft-row-info { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+.draft-row-label { font-size: 0.88rem; font-weight: 600; color: var(--warning-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.draft-row-meta { font-size: 0.76rem; color: var(--ink-500); }
+.draft-row-actions { display: flex; gap: 6px; flex-shrink: 0; }
+.draft-btn-resume { background: var(--surface); border: 1px solid var(--warning-border); color: var(--warning-text); border-radius: 8px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: 0.2s; white-space: nowrap; }
+.draft-btn-resume:hover { background: var(--warning-text); color: #fff; }
+.draft-btn-discard { background: transparent; border: none; cursor: pointer; font-size: 0.9rem; color: var(--ink-400); padding: 4px; }
+.draft-btn-discard:hover { color: var(--danger-text); }
+
+/* ==================== בניית/עריכת בדיקה ==================== */
+.task-edit-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; margin-bottom: 16px; box-shadow: var(--shadow-xs); transition: 0.3s; }
+.task-edit-card:hover { border-color: var(--border-strong); }
+.task-edit-header { display: flex; gap: 15px; margin-bottom: 18px; align-items: center; }
+.task-title-input { flex: 1; font-size: 1.1rem; font-weight: 500; border-bottom: 2px solid var(--border); padding: 8px 5px; }
+.btn-delete-task { background: var(--danger-bg); border: none; border-radius: 8px; width: 38px; height: 38px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s; flex-shrink: 0; }
+.btn-delete-task:hover { background: var(--danger-border); }
+
+.task-edit-body { display: flex; flex-direction: column; gap: 18px; padding-right: 10px; border-right: 3px solid #f3f4f6; }
+.task-status-group { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+.status-buttons { display: flex; gap: 10px; }
+.status-btn { padding: 8px 18px; border: 1px solid var(--border); background: #f9fafb; border-radius: var(--radius-sm); cursor: pointer; font-weight: 500; transition: 0.2s; color: var(--ink-500); }
+.active-ok { background: var(--success-bg); border-color: var(--success-border); color: var(--success-text); }
+.active-critical { background: var(--danger-bg); border-color: var(--danger-border); color: var(--danger-text); }
+
+.task-notes-group { width: 100%; }
+.image-upload-label { display: inline-block; border: 1px dashed var(--border-strong); padding: 12px 20px; border-radius: var(--radius-sm); background: #f9fafb; cursor: pointer; transition: 0.2s; }
+.image-upload-label:hover { border-color: var(--brand-500); }
+.task-img-preview { width: 76px; height: 48px; object-fit: cover; border-radius: 6px; }
+
+/* ==================== רספונסיביות ==================== */
+@media (max-width: 900px) {
+  .details-grid { grid-template-columns: 1fr; }
+  .category-grid { grid-template-columns: 1fr; }
+  .section-columns { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .app-container { width: 100%; padding: 20px 12px 60px; }
+  header.main-header { padding: 16px 18px; }
+  .cards-grid { grid-template-columns: 1fr; gap: 20px; }
+}
